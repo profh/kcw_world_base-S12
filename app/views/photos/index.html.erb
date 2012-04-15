@@ -1,0 +1,28 @@
+<h2>Photos</h2>
+<table class="table table-striped">
+  <thead>
+    <tr>
+			<th>&nbsp;</th>
+      <th>Caption</th>
+			<th>Category</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @photos.each do |photo| %>
+      <tr>
+				<td><%= image_tag photo.image_url %></td>
+        <td><%= link_to photo.caption, photo_path(photo) %></td>
+				<td><%= photo.category.name %></td>
+        <td>
+          <%= link_to 'Edit', edit_photo_path(photo), :class => 'btn btn-mini' %>
+          <%= link_to 'Destroy', photo_path(photo), :method => :delete, :confirm => 'Are you sure?', :class => 'btn btn-mini btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= will_paginate @photos, :previous_label => "Previous&nbsp;", :next_label => "&nbsp;Next" %>
+
+
+<%= link_to 'New Photo', new_photo_path, :class => 'btn btn-primary' %>

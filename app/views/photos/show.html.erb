@@ -1,0 +1,24 @@
+<p>
+  <% unless @photo.image_url.nil? %> 
+		<p><%= image_tag @photo.image_url %></p>
+	<% end %>
+  <%= @photo.caption %>
+</p>
+
+<p>&nbsp;</p>
+
+<p>
+  <b>Category</b>: 
+  <%= @photo.category.name %>
+</p>
+
+<p>
+  <b>Active</b>: 
+  <%= @photo.active ? "Yes" : "No" %>
+</p>
+
+<div class="form-actions">
+  <%= link_to 'Back', photos_path, :class => 'btn'  %>
+  <%= link_to 'Edit', edit_photo_path(@photo), :class => 'btn' %>
+  <%= link_to 'Delete', photo_path(@photo), :method => 'delete', :confirm => 'Are you sure?', :class => 'btn btn-danger' %>
+</div>

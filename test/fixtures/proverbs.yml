@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  klingon: MyString
+  translation: MyString
+  active: false
+
+two:
+  klingon: MyString
+  translation: MyString
+  active: false

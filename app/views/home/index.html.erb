@@ -1,0 +1,9 @@
+<p>This site is designed to inspire Klingon code warriors with a randomly selected quote from a collection of Klingon wisdom.  Today's quote of the day is as follows:</p>
+<p class="supertiny">&nbsp;</p>
+<% unless @proverb.nil? %>
+	<p class="klingon"><%= @proverb.klingon %></p><br>
+	<p class="translation"><%= @proverb.translation %></p>
+<% end %>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<%= link_to 'Add a new Klingon proverb to our list', new_proverb_path %>

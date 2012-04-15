@@ -1,0 +1,25 @@
+<h2>Articles</h2>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Title</th>
+			<th>Category</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @articles.each do |article| %>
+      <tr>
+        <td><%= link_to article.title, article_path(article) %></td>
+				<td><%= article.category.name %></td>
+        <td>
+          <%= link_to 'Edit', edit_article_path(article), :class => 'btn btn-mini' %>
+          <%= link_to 'Destroy', article_path(article), :method => :delete, :confirm => 'Are you sure?', :class => 'btn btn-mini btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= will_paginate @articles, :previous_label => "Previous&nbsp;", :next_label => "&nbsp;Next" %>
+
+<%= link_to 'New Article', new_article_path, :class => 'btn btn-primary' %>

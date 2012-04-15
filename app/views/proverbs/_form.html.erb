@@ -1,0 +1,14 @@
+<%= simple_form_for @proverb, :html => { :class => 'form-horizontal' } do |f| %>
+  <fieldset>
+    <legend><%= controller.action_name.capitalize %> Photo</legend>
+
+		<%= f.input :klingon %>
+		<%= f.input :translation %>
+    <%= f.input :active %>
+
+    <div class="form-actions">
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to 'Cancel', proverbs_path, :class => 'btn' %>
+    </div>
+  </fieldset>
+<% end %>

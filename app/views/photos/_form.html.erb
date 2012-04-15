@@ -1,0 +1,15 @@
+<%= simple_form_for @photo, :html => { :class => 'form-horizontal' } do |f| %>
+  <fieldset>
+    <legend><%= controller.action_name.capitalize %> Photo</legend>
+
+		<%= f.input :caption %>
+		<%= f.input :image %>
+		<%= f.input :category_id, :collection => Category.active.alphabetical, :include_blank => true %>
+    <%= f.input :active %>
+
+    <div class="form-actions">
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to 'Cancel', photos_path, :class => 'btn' %>
+    </div>
+  </fieldset>
+<% end %>

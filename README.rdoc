@@ -1,0 +1,7 @@
+This is an extension of a super simple Rails app that was built as a class demonstration in the spring of 2012.  The proverbs example now allows the user to add photos and articles to the site as well as comment on each of these three features and add ratings to photos.  The primary reason is to demonstrate [1] use of nested resources (comments nested within articles, etc.), [2] use of polymorphic associations (comments tied into multiple other entities), and [3] a simple rating system (as time allows to build that in).  Twitter bootstrap is used to give the style a basic facelift.
+
+The class is Application Design & Development and is for Information Systems students at Carnegie Mellon University (campuses both in Pittsburgh and Doha).  We have posted this code on github.com in a public directory so that (a) it 
+is readily accessible to students in both PA and Qatar and (b) that students 
+will get a little familiarity with github.com.
+
+NOTE: This project does require the use of the will_paginate, carrierwave, and simple_form gems to work properly.

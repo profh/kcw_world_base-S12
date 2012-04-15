@@ -1,0 +1,25 @@
+<h2>Proverbs</h2>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Klingon</th>
+      <th>Translation</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @proverbs.each do |proverb| %>
+      <tr>
+        <td><%= link_to proverb.klingon, proverb_path(proverb) %></td>
+        <td><%= proverb.translation %></td>
+        <td>
+          <%= link_to 'Edit', edit_proverb_path(proverb), :class => 'btn btn-mini' %>
+          <%= link_to 'Destroy', proverb_path(proverb), :method => :delete, :confirm => 'Are you sure?', :class => 'btn btn-mini btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= will_paginate @proverbs, :previous_label => "Previous&nbsp;", :next_label => "&nbsp;Next" %>
+
+<%= link_to 'New Proverb', new_proverb_path, :class => 'btn btn-primary' %>

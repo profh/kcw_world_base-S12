@@ -1,0 +1,17 @@
+<h1>Category</h1>
+
+<p>
+  <b>Name</b><br>
+  <%= @category.name %>
+</p>
+
+<p>
+  <b>Active</b><br>
+  <%= @category.active %>
+</p>
+
+<div class="form-actions">
+  <%= link_to 'Back', categories_path, :class => 'btn'  %>
+  <%= link_to 'Edit', edit_category_path(@category), :class => 'btn' %>
+  <%= link_to 'Delete', category_path(@category), :method => 'delete', :confirm => 'Are you sure?', :class => 'btn btn-danger' %>
+</div>

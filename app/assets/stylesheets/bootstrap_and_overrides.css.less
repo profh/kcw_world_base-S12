@@ -1,0 +1,88 @@
+@import "twitter/bootstrap/bootstrap";
+
+body { 
+	padding-top: 20px; 
+	font-size: 14px;
+} 
+
+#wrapper { 
+	/*background-color: #004080;*/
+	background-color: #ffffff;
+}
+
+.supertiny {
+	font-size: 5px;
+	/*line-height: 1.5;*/
+}
+
+.well {
+	line-height: 1.5;
+	background-color: #E8FFFF;
+}
+
+.well li {
+	font-size: 130%;
+	line-height: 1.5;
+}
+
+.table th.centered, .table td.centered {
+    text-align: center;
+}
+
+#footer {
+	margin-top: 15px;
+	margin-bottom: 15px;
+  padding-top: 0px;
+	background-color:#B3B3B3;
+	color: #000;
+	text-align: center;
+}
+
+.well li {
+	font-size: 95%;
+}
+
+#footer a {
+	color: #7F7F7F;
+	text-decoration: none;
+}
+
+#footer a:hover {
+	color: #999;
+	text-decoration: underline;
+}
+
+.navbar-inner {
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+}
+
+.ident {
+	padding-top: 10px;
+}
+
+
+#copy {
+	font-size: 85%;
+	text-align: center;
+}
+
+
+
+
+@import "twitter/bootstrap/responsive";
+
+// Set the correct sprite paths
+@iconSpritePath: asset-path('twitter/bootstrap/glyphicons-halflings.png');
+@iconWhiteSpritePath: asset-path('twitter/bootstrap/glyphicons-halflings-white.png');
+
+// Your custom LESS stylesheets goes here
+//
+// Since bootstrap was imported above you have access to its mixins which
+// you may use and inherit here
+//
+// If you'd like to override bootstrap's own variables, you can do so here as well
+// See http://twitter.github.com/bootstrap/less.html for their names and documentation
+//
+// Example:
+// @linkColor: #ff0000;
