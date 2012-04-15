@@ -1,7 +1,7 @@
 class CategoriesController < ApplicationController
   
   def index
-    @categories = Category.paginate(:page => params[:page]).per_page(10)
+    @categories = Category.alphabetical.paginate(:page => params[:page]).per_page(10)
   end
 
 
