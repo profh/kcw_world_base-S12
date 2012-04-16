@@ -1,0 +1,9 @@
+<div id="comments">
+<% for comment in @comments %>
+  <div class="comment">
+    <%= comment.content %><br>	
+		by <strong><%= mail_to comment.email, comment.name, :encode => "javascript" %></strong>
+	  <em>on <%= comment.created_at.strftime('%b %d, %Y at %H:%M') %></em>
+  </div>
+<% end %>
+</div>

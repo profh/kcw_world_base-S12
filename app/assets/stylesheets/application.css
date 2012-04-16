@@ -23,3 +23,15 @@
 	font-style: italic;
 	font-family: Verdana;
 }
+
+.comment {
+	border: solid 1px #993333;
+  margin: 15px 0;
+	width: 500px;
+	padding: 5px;
+	background-color: #FAE2EA;
+}
+
+.comment a {
+	color: #993333;
+}
