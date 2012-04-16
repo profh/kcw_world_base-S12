@@ -7,3 +7,5 @@ will get a little familiarity with github.com.
 NOTE: This project does require the use of the will_paginate, carrierwave, and simple_form gems to work properly.
 
 NOTE 2: There is a prepopulated database for this project to speed things along.
+
+Please accept this humble pull request.
